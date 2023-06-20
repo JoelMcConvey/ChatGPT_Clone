@@ -47,7 +47,7 @@ function App() {
         }
       }
       try {
-        const response = await fetch('/completions', options);
+        const response = await fetch('https://chatgpt-clone-cbnj.onrender.com/completions', options);
         const data = await response.json();
         return setMessage(data.choices[0].message);
       } catch (error) {
