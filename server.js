@@ -14,7 +14,7 @@ app.use(cors());
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-app.post('/', async (req, res) => {
+app.post('/completions', async (req, res) => {
     const options = {
         method: "POST",
         headers: {
