@@ -1,10 +1,10 @@
-const PORT = 8000;
 const express = require('express');
 const cors = require('cors');
 const path = require('path')
 const fetch = require('node-fetch');
 const app = express();
 const buildPath = path.join(__dirname, 'build');
+const port = process.env.PORT || 3001;
 require('dotenv').config();
 
 
@@ -40,4 +40,4 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(buildPath, 'index.html'))
   })
 
-app.listen(PORT, () => console.log('Your server is running on PORT ' + PORT))
+app.listen(port, () => console.log('Your server is running on PORT ' + port))
